@@ -1,0 +1,22 @@
+
+<p-sidebar [(visible)]="sidebarVisible" position="right">
+    <ng-template pTemplate="header">Notificações</ng-template>
+    <ng-template pTemplate="content">
+        <div class="card">
+            <div class="card-body">
+                <ul class="list-unstyled mb-0">
+                    <li *ngFor="let item of list">
+                        <app-card-notificacoes
+                            [title]="item.title"
+                            [date]="item.date"
+                        ></app-card-notificacoes>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </ng-template>
+</p-sidebar>
+
+<p-button icon="pi pi-bell" styleClass="p-button-warning" class="mr-2" (click)="sidebarVisible = true"></p-button>
+
+    

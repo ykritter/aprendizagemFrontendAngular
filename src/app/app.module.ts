@@ -67,6 +67,9 @@ import { ComentarioComponent } from './components/ApoioDuvidas/comentario/coment
 
 import { ListaObjetosAprendizagem } from './components/UnidadeCurricular/lista-objetos-aprendizagem/lista-objetos-aprendizagem.component';
 
+import { NotificacoesComponent } from './notificacoes/notificacoes.component';
+import { CardNotificacoesComponent } from './notificacoes/card-notificacoes/card-notificacoes.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatTableModule } from '@angular/material/table';
 import { MatIconModule } from '@angular/material/icon';
@@ -122,6 +125,7 @@ import { CarouselModule } from 'primeng/carousel';
 import { KnobModule } from 'primeng/knob';
 import { SplitterModule } from 'primeng/splitter';
 import { AvatarModule } from 'primeng/avatar';
+import { SidebarModule } from 'primeng/sidebar';
 
 //Ngx Imports
 import { DragScrollModule } from 'ngx-drag-scroll';
@@ -136,6 +140,7 @@ import localePT from '@angular/common/locales/pt';
 import localeES from '@angular/common/locales/es';
 import localeDE from '@angular/common/locales/de';
 import localeFR from '@angular/common/locales/fr';
+
 
 registerLocaleData(localePT);
 registerLocaleData(localeES);
@@ -189,7 +194,9 @@ registerLocaleData(localeFR);
     ListagemUsuarioBadgesComponent,
     ApoioDuvidasComponent,
     ComentarioComponent,
-    ListaObjetosAprendizagem
+    ListaObjetosAprendizagem,
+    NotificacoesComponent,
+    CardNotificacoesComponent
   ],
   imports: [
     BrowserModule,
@@ -250,7 +257,8 @@ registerLocaleData(localeFR);
     DragScrollModule,
     KnobModule,
     SplitterModule,
-    AvatarModule
+    AvatarModule,   
+    SidebarModule
   ],
   providers: [
     CursosService,
